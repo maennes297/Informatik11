@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatik Dokumentation | E-Phase</title>
+    <style>
+        :root {
+            --bg: #f8f9fa;
+            --text: #212529;
+            --header: #0d6efd;
+            --code-bg: #f0f0f0;
+            --border: #dee2e6;
+        }
+        [data-theme="dark"] {
+            --bg: #121212;
+            --text: #e0e0e0;
+            --header: #6ea8fe;
+            --code-bg: #2d2d2d;
+            --border: #444;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--bg);
+            color: var(--text);
+            transition: background 0, color 0.3s;
+        }
+        h1, h2, h3 {
+            color: var(--header);
+            border-bottom: 2px solid var(--header);
+            padding-bottom: 10px;
+        }
+        pre {
+            background: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border-left: 4px solid var(--header);
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            background: var(--code-bg);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .verzArray {
+            background: var(--code-bg);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .verzArray a {
+            color: var(--header);
+            text-decoration: none;
+        }
+        .verzArray a:hover {
+            text-decoration: underline;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--code-bg);
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .entry {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        blockquote {
+            border-left: 4px solid var(--header);
+            padding-left: 15px;
+            margin-left: 0;
+            color: var(--text);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <menu>
+        <a href="main.html">Startseite</a>
+    </menu>
+    <button class="theme-toggle" onclick="toggleTheme()">Theme wechseln</button>
+    <h1>Informatik Dokumentation | E-Phase</h1>
+    <p><em>Autor: Alwin Thias | Generiert am 30.08.2026</em></p>
+
+    <div class="verzArray">
+        <h2>Inhaltsverzeichnis</h2>
+        <ul>
+            <li><a href="#170826--die-leuchtfeuer-von-amon-dúin">17.08.26 | Die Leuchtfeuer von Amon Dúin</a></li>
+<li><a href="#240826--kommunikation">24.08.26 | Kommunikation</a></li>
+        </ul>
+    </div>
+
+    <div class="entry"><h1>Thema Datenübertragung:</h1>
+<h2 id="170826--die-leuchtfeuer-von-amon-dúin">17.08.26 | Die Leuchtfeuer von Amon Dúin</h2>
+<ul>
+<li><strong>Sender</strong>: <em>Gandalf</em></li>
+<li><strong>Empfänger</strong>: <em>Der König</em> oder alle in Sichtweite des jeweiligen Leuchtfeuers</li>
+</ul>
+<img src="/home/alth/Schule/Informatik/leuchtfeuerAmonDuin.png">
+<h2 id="240826--kommunikation">24.08.26 | Kommunikation</h2>
+<h3><strong>Amon Dúin | Wo können Probleme auftreten?</strong></h3>
+<ul>
+<li>Pippin wird aufgehalten</li>
+<li>technische Schwierigkeiten</li>
+<li>"faule Wache"</li>
+<li>Kommunikationsschierigkeiten</li>
+<li>Bedeutung des Leuchtfeuers kann verloren gehen</li>
+</ul>
+<h3><strong>Das Sender Empfänger Modell</strong></h3>
+Kommunikation lässt sich im Allgemeinen mit dem Sender-Empfänger-Modell beschreiben
+<ol>
+<li>Ein Sender möchte eine bestimmte Nachricht übermitteln (Diese Nachricht enthält Informationen)</li>
+<li>Dafür <em>codiert</em> er sie in ein oder mehrere Signale.</li>
+<li>Die Signale werden übertragen (z.B. visuell, elektrisch... )</li>
+<li>Der Empfänger erhält die Signale und <em>decodiert</em>, um die darin enthaltenen Informationen zu erhalten.</li>
+</ol>
+Bei der Übertragung einer Nachricht können an verschiedenen Stellen Probleme auftreten:
+<ul>
+<li>Bei der Codierung/Decodierung können Fehler auftreten (z.B. wenn die Decodierungsmethode unbekannt oder ungenau ist)</li>
+<li>Es können Signalstörungen auftreten</li>
+<li>Sicherheitsaspekte: Unbeteiligte können den Kommunikationsprozess abhören</li>
+<li>Die Übertragungsgeschwindigkeit kann zu Problemen führen</li>
+<li>Es können Kollisionen von Nachrichten auftreten, wenn die Leitungen nicht für die Anzahl an Nachrichten ausgelegt ist </li>
+</ul></div>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            html.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+        }
+        // Lade letztes Theme
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        document.querySelector('.theme-toggle').addEventListener('click', () => {
+            const theme = document.documentElement.getAttribute('data-theme');
+            localStorage.setItem('theme', theme);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+Dokumentation Informatik E1
+----------------------------
+1.Netzwerke
+	1.2 Beispiel
+	-/home/alth/Schule/Informatik/leuchtfeuerAmonDuin.png
+	-Feuer von Amon Duín
+	-Gondor braucht hilfe, Gandalf gibt Pippin Befehl Feuer zu entzünden, Pippin entzündet Feuer, Nächstes Leuchtfeuer sieht das, Leuchtfeuer wird entzündet, Geht so weiter, Aragorn sieht Feuer und berichtet König Theoden, Nachricht: Gondor braucht Hilfe
+		1.2.1 Probleme
+		-Kommunikationsschwierigkeiten zwischen Gandalf und Pippin
+		-Pippin kann Leuchtfeuer nicht entzünden
+		-Nur eine mögliche Nachricht
+		-Sabotage
+		-Feuer wird nicht gesehen
+		-Effizienzprobleme

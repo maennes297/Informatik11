@@ -1,0 +1,25 @@
+
+# Thema Datenübertragung:
+## 17.08.26 | Die Leuchtfeuer von Amon Dúin
+- **Sender**: *Gandalf*
+- **Empfänger**: *Der König* oder alle in Sichtweite des jeweiligen Leuchtfeuers
+<img src="/home/alth/Schule/Informatik/leuchtfeuerAmonDuin.png">
+## 24.08.26 | Kommunikation
+###  **Amon Dúin | Wo können Probleme auftreten?**
+- Pippin wird aufgehalten
+- technische Schwierigkeiten
+- "faule Wache"
+- Kommunikationsschierigkeiten
+- Bedeutung des Leuchtfeuers kann verloren gehen
+### **Das Sender Empfänger Modell**
+Kommunikation lässt sich im Allgemeinen mit dem Sender-Empfänger-Modell beschreiben
+; Ein Sender möchte eine bestimmte Nachricht übermitteln (Diese Nachricht enthält Informationen)
+; Dafür *codiert* er sie in ein oder mehrere Signale.
+; Die Signale werden übertragen (z.B. visuell, elektrisch... )
+; Der Empfänger erhält die Signale und *decodiert*, um die darin enthaltenen Informationen zu erhalten.
+Bei der Übertragung einer Nachricht können an verschiedenen Stellen Probleme auftreten:
+- Bei der Codierung/Decodierung können Fehler auftreten (z.B. wenn die Decodierungsmethode unbekannt oder ungenau ist)
+- Es können Signalstörungen auftreten
+- Sicherheitsaspekte: Unbeteiligte können den Kommunikationsprozess abhören
+- Die Übertragungsgeschwindigkeit kann zu Problemen führen
+- Es können Kollisionen von Nachrichten auftreten, wenn die Leitungen nicht für die Anzahl an Nachrichten ausgelegt ist 

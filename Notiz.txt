@@ -1,0 +1,32 @@
+-Computer hat Internet
+-Website liegt auf Server in Kölle
+-Computer auf Schreibtisch
+-Providersoftware
+	-hilft Seite zu finden
+	-modem codiert und schickt zu provider
+	-provider gibt die Seite der Maus wieder
+	-provider geht zu dns
+	-provider gibt ip zu rechner
+-Browser gibt anfrage an maus seite
+-maus server gibt seite aus
+-seite wandert zu browser
+
+Akteure:
+	-User
+	-Browser
+	-Client
+	-Router/Modem
+--------------------------
+	-Router
+	-Zwischenserver
+--------------------------
+	-Provider
+	-DNS-Server
+	-Server des WDR
+
+Prozesse bestimmen
+	-Provider gibt "Wartenummer"
+	-Nutzer meldet sich bei Provider an
+	-Modem schickt Nachricht ins "Internet"
+	-Nutzer gibt URL ein
+	-Provider schickt request an DNS server

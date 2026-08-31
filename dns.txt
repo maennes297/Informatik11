@@ -1,0 +1,26 @@
+Domain Name Server 
+----------------------
+
+-User sendet 'human readable' Namen und DNS sucht wie Telefonvermittlung die IP-Adresse des betroffenen Recheners 
+-DNS ist dezentral
+-Hierarchische Struktur nach Namensräumen
+
+
+-Man kann sich URLs wie einen Baum vorstellen
+	-Domain-Name alles nach ://
+	-jeder Einzelne Zweig wird von einem Lable begonnen
+		-Jedes Lable 1 - 63 Byte lang und wird von einem Punkt abgeschlossen
+			-Ganze URL darf nur 255 Bytes lang sein
+	-das Lesen der Domain geht von rechts nach Links
+		-Lable ganz rechts: Top-Level-Domain
+		-Lable 1 weiter links: Second-Level Domain
+		-usw.
+	-Für jede Ebende gibt es DNS server
+		-Delegierungen von ebene zu ebene
+		-Jeder DNS-Server kennt DNS-Server eine Delegation drunter
+			-Root Nameserver sind für Top-Level-Domain zuständig
+	-Als erste Ebene gibt es den DNS-Resolver
+		-Wenn Domain-Name bekannt wird IP-Adresse direkt zurück gegeben
+		-Wenn Domain Name unbekannt wird bei anderen DNS-Servern nachgefragt
+			-Diese Server geben Datenpaket
+			-DNS-resolver gibt IP-Adresse an Client

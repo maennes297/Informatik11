@@ -25,8 +25,12 @@ Akteure:
 	-Server des WDR
 
 Prozesse bestimmen
-	-Provider gibt "Wartenummer"
 	-Nutzer meldet sich bei Provider an
-	-Modem schickt Nachricht ins "Internet"
-	-Nutzer gibt URL ein
-	-Provider schickt request an DNS server
+	-Nutzer sendet URL
+	-Provider gibt "Wartenummer"
+	-Provider schickt request an DNS Server
+	-DNS Server gibt IP-Adresse
+	-Provider sendet Anfrage an WDR Server
+	-WDR Server gibt Seite an Provider
+	-Provider gibt Seite an Nutzer mit passender Wartenummer
+	-Anfragen und Antworten gehen immer über Datenpaket über verschiedene Server

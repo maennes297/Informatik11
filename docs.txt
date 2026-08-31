@@ -22,4 +22,13 @@ Bei der Übertragung einer Nachricht können an verschiedenen Stellen Probleme a
 - Es können Signalstörungen auftreten
 - Sicherheitsaspekte: Unbeteiligte können den Kommunikationsprozess abhören
 - Die Übertragungsgeschwindigkeit kann zu Problemen führen
-- Es können Kollisionen von Nachrichten auftreten, wenn die Leitungen nicht für die Anzahl an Nachrichten ausgelegt ist 
+- Es können Kollisionen von Nachrichten auftreten, wenn die Leitungen nicht für die Anzahl an Nachrichten ausgelegt ist
+## 31.08.2026 | Kommunikation
+### Mind-Map Internet (Sendung mit der Maus)
+<img src="/home/alth/Schule/Informatik/mindMapInternet.png">
+### Domain-Name-System (DNS)
+Das DNS ist ein System, welches Namen in Form von "Links" zu Ip-Adressen übersetzt. Für den Menschen ist es deutlich leichter, sich einen Text zu merken, als eine Zahlenkette. Darum gibt es Domain-Namen. Diese finden sich in der URL immer nach dem '://'.
+DNS ist ein dezentrales Netzwerk. Das bedeutet, dass die Server für das System über die ganze Welt verteilt stehen.
+Um eine Ordung zu gewährleisten sind die Server untereinander Hierarchisch strukturiert. Dafür gibt es verschiedene Ebenen.
+
+Um das Grundprinzip von DNS zu verstehen kann man sich einen Baum vorstellen. Jede Verzweigung in diesem Baum ist eine Ebende im DNS. Im Domain Name werden diese Ebenen auch Sichtbar. 

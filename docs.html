@@ -90,7 +90,7 @@
     </menu>
     <button class="theme-toggle" onclick="toggleTheme()">Theme wechseln</button>
     <h1>Informatik Dokumentation | E-Phase</h1>
-    <p><em>Autor: Alwin Thias | Generiert am 01.09.2026</em></p>
+    <p><em>Autor: Alwin Thias | Generiert am 06.09.2026</em></p>
 
     <div class="verzArray">
         <h2>Inhaltsverzeichnis</h2>
@@ -142,7 +142,7 @@ Das DNS ist ein System, welches Namen zu Ip-Adressen übersetzt. Für den Mensch
 sich einen Text zu merken, als eine Zahlenkette. Darum gibt es Domain-Namen. Diese finden sich in der URL immer nach dem <code>://</code> und
 vor dem nächsten <code>/</code>.
 DNS ist ein dezentrales Netzwerk. Das bedeutet, dass die Server für das System über die ganze Welt verteilt stehen.
-Um eine Ordung zu gewährleisten sind die Server untereinander Hierarchisch strukturiert. Dafür gibt es verschiedene Ebenen.
+Um eine Ordung zu gewährleisten sind die Server untereinander hierarchisch strukturiert. Dafür gibt es verschiedene Ebenen.
 </p>
 <p>
 Diese Ebenen werden im Domain-Namen sichtbar. Ein Domain-Name wird immer von rechts gelesen.
@@ -154,12 +154,33 @@ und <code>www.</code> ist schließlich die Sub-Level-Domain und gibt den Nutzen 
 <p>
 Der Nutzer kann nun eine Anfrage Senden. Diese enthält unter anderem den Domain-Namen.
 Für die Anfragen gibt es zwei Verschiedene Arten: rekursiv und iterativ.
-
+</p>
+<p>
 <strong>Rekursiv</strong>: Bei der rekursiven Auflösung sendet der Client (also das Gerät des Nutzers) erstmal eine Anfrage an seinen eigenen
 lokalen DNS-Cache. In diesem werden kürzlich besuchte Internetseiten gespeichert. Ist die Seite im lokalen DNS-Cache schon bekannt, 
-gibt dieser die IP-Adresse direkt zurück. Ist die IP-Adresse nicht bekannt, fragt der DNS-Resolver (das eigentliche
+gibt dieser die IP-Adresse direkt zurück. Ist die IP-Adresse hingegen nicht bekannt, fragt der DNS-Resolver (das eigentliche
 Übersetzungsgerät) eine Ebene höher nach, ob die IP-Adresse bekannt ist. Im Falle eines WLANs wäre das zum Beispiel der WLAN-Router.
-<strong>Iterativ</strong>: Bei der iterativen Auflösung sendet der DNS-Resolver auch eine Anfrage an den Root-Nameserver. Dieser sendet dann aber nur eine weitere Anlaufstelle an den DNS-Resolver, bei der dieser dann auch nachfragt. So geht das dann weiter und der DNS-Resolver fragt solange weiter, bis einer der Server die IP-Adresse kennt. 
+Ist auch dort die Adresse nicht bekannt wird wieder eine Ebene höher nachgefragt (z. B. beim Provider) und dies geht dann immer so
+weiter, bis die IP-Adresse irgendwo bekannt ist und diese wird dann zurück zum Client gegeben. 
+</p>
+<p>
+<strong>Iterativ</strong>: Bei der iterativen Auflösung sendet der DNS-Resolver auch eine Anfrage an die Root-Nameserver. Diesem sind die 
+Nameserver für die Top-Level-Domains bekannt. Sie senden dann eine Adresse für weitere Anlaufstellen an den DNS-Resolver zurück, bei 
+der dieser dann auch nachfragt. So geht das dann weiter und der DNS-Resolver fragt solange weiter, bis einer der Server die 
+IP-Adresse kennt. 
+</p>
+<p>
+Diese Methode scheint erstmal verhältnismäßig komplex, da es deutlich einfacher scheint einfach einen Zentralen Server einzurichten, 
+bei dem dann alle nachfragen können. Dies hätte aber gleich mehrere Nachteile:
+<ul>
+<li>Der Server bräuchte eine sehr große Speichermenge, um alle IP-Adressen zu speichern.</li>
+<li>Der Server bräuchte eine sehr große Rechenleistung, um die über 1 Milliarden DNS Anfragen zu verarbeiten.</li>
+<li>Würde der Server ausfallen würde der komplette Weltweite Internetverkehr lahmgelegt.</li>
+</ul>
+Deshalb ist das System dezentral. So gibt es mehrere Root-Nameserver, mehrere Server für die Top-Level-Domain usw. Fällt also 
+einer der Server aus, gibt es noch ein Backup. Auch müssen bei jedem Server nicht so viele Daten gespeichert werden und die Last der Anfragen verteilt sich.
+Dazu kommt noch, dass wenn sich die IP-Adresse eines Webservers ändert, sie nur auf der niedrigsten Ebene geändert werden muss. 
+So muss nicht im Speicher der Root-Nameserver geschrieben werden und das Risiko von Fehlern wird verringert.
 </p></div>
 
     <script>

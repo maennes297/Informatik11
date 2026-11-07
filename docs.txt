@@ -40,7 +40,7 @@ Eine Ebene wird immer mit einem Punkt abgeschlossen. Ein Label kann 1 - 63 Byte 
 wobei der Domain-Name nicht größer als 255 Byte groß sein darf. Die Labels werden Anhand ihrer Position benannt. 
 Nimmt man zum Beispiel den Domain-Namen 'www.example.com' ist 'com.' die Top-Level-Domain, 'example.' die Second-Level-Domain usw.
 und 'www.' ist schließlich der Service und gibt den Nutzen an: 'www.' für Internetseiten, 'ftp.' für Dateiübertragung etc.
-<img src="/home/alth/Schule/Informatik/Domain-Name.png">
+<img src="Domain-Name.png">
 </p>
 <p>
 Der Nutzer (oder auch Client) kann nun eine Anfrage an einen DNS-Server Senden. Diese enthält unter anderem den Domain-Namen.

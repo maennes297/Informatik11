@@ -1,0 +1,18 @@
+Domain-Name-System (DNS)
+-------------------------
+Das DNS ist ein System, welches Namen zu Ip-Adressen übersetzt. Für den Menschen ist es deutlich einfacher, sich einen Text zu merken, als eine Zahlenkette. Darum gibt es Domain-Namen. Diese finden sich in der URL immer nach dem :// und vor dem nächsten /. DNS ist ein dezentrales Netzwerk. Das bedeutet, dass die Server für das System über die ganze Welt verteilt stehen. Um eine Ordung zu gewährleisten sind die Server untereinander hierarchisch strukturiert. Dafür gibt es verschiedene Ebenen.
+
+Diese Ebenen werden im Domain-Namen sichtbar. Ein Domain-Name wird immer von rechts gelesen. Eine Ebene wird immer mit einem Punkt abgeschlossen. Ein Label kann 1 - 63 Byte groß sein, wobei der Domain-Name nicht größer als 255 Byte groß sein darf. Die Labels werden Anhand ihrer Position benannt. Nimmt man zum Beispiel den Domain-Namen www.example.com ist com. die Top-Level-Domain, example. die Second-Level-Domain usw. und www. ist schließlich der Service und gibt den Nutzen an: www. für Internetseiten, ftp. für Dateiübertragung etc.
+
+Der Nutzer (oder auch Client) kann nun eine Anfrage an einen DNS-Server Senden. Diese enthält unter anderem den Domain-Namen. Für die Anfragen gibt es zwei Verschiedene Arten: rekursiv und iterativ. 
+Rekursiv: Bei der rekursiven Auflösung sendet der Client (also das Gerät des Nutzers) erstmal eine Anfrage an seinen eigenen lokalen DNS-Cache (Zwischenspeicher). In diesem werden kürzlich besuchte Internetseiten gespeichert. Ist die Seite im lokalen DNS-Cache schon bekannt, gibt dieser die IP-Adresse direkt zurück. Ist die IP-Adresse hingegen nicht bekannt, fragt der DNS-Resolver (das eigentliche Übersetzungsgerät) eine Ebene höher nach, ob die IP-Adresse bekannt ist. Im Falle eines WLANs wäre das zum Beispiel der WLAN-Router. Ist auch dort die Adresse nicht bekannt wird wieder eine Ebene höher nachgefragt (z. B. beim Provider) und dies geht dann immer so weiter, bis die IP-Adresse irgendwo bekannt ist und diese wird dann zurück zum Client gegeben.  
+
+Iterativ: Bei der iterativen Auflösung sendet der DNS-Resolver auch eine Anfrage an die Root-Nameserver. Diesem sind die Nameserver für die Top-Level-Domains bekannt. Sie senden dann eine Adresse für weitere Anlaufstellen an den DNS-Resolver zurück, bei der dieser dann auch nachfragt. So geht das dann weiter und der DNS-Resolver fragt solange weiter, bis einer der Server die IP-Adresse kennt.
+
+ Diese Methode scheint erstmal verhältnismäßig komplex, da es deutlich einfacher scheint einfach einen Zentralen Server einzurichten, bei dem dann alle nachfragen können. Dies hätte aber gleich mehrere Nachteile:
+
+    Der Server bräuchte eine sehr große Speichermenge, um alle IP-Adressen zu speichern.
+    Der Server bräuchte eine sehr große Rechenleistung, um die über 1 Milliarden DNS Anfragen zu verarbeiten.
+    Würde der Server ausfallen würde der komplette Weltweite Internetverkehr lahmgelegt.
+
+Deshalb ist das System dezentral. So gibt es mehrere Root-Nameserver, mehrere Server für die Top-Level-Domain usw. Fällt also einer der Server aus, gibt es noch ein Backup. Auch müssen bei jedem Server nicht so viele Daten gespeichert werden und die Last der Anfragen verteilt sich. Dazu kommt noch, dass wenn sich die IP-Adresse eines Webservers ändert, sie nur auf der niedrigsten Ebene geändert werden muss. So muss nicht im Speicher der Root-Nameserver geschrieben werden und das Risiko von Fehlern wird verringert. 
